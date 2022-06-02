@@ -14,4 +14,8 @@ fn main() {
 
     // remainder
     let remainder = 43 % 5;
+
+    let t = true;
+
+    let f: bool = false;
 }
