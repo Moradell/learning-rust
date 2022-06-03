@@ -30,4 +30,11 @@ fn main() {
     let (x, y, z) = tup;
 
     println!("The value of y is: {y}");
+
+    let months = ["January", "February", "March", "April", "May", "June", "July",
+              "August", "September", "October", "November", "December"];
+
+    let a: [i32; 5] = [1, 2, 3, 4, 5];
+
+    let a = [3; 5];
 }
