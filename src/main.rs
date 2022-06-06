@@ -86,9 +86,32 @@ fn main() {
 
     convert_temperature(50);
 
+    let fibonacci_number = fibonacci(2);
+    println!("{}", fibonacci_number);
+
 }
 
 fn convert_temperature(f_grad: i32) {
     let mut c_grad = (f_grad - 32) * 5/9;
     println!("{} grad F = {} grad C", f_grad, c_grad)
+}
+
+fn fibonacci(n: i32) -> u64 {
+	if n < 0 {
+		panic!("{} is negative!", n);
+	} else if n == 0 {
+		panic!("zero is not a right argument to fibonacci()!");
+	} else if n == 1 {
+		return 1;
+	}
+
+	let mut sum = 0;
+	let mut last = 0;
+	let mut curr = 1;
+	for _i in 1..n {
+		sum = last + curr;
+		last = curr;
+		curr = sum;
+	}
+	sum
 }
