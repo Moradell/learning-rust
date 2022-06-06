@@ -83,4 +83,12 @@ fn main() {
         println!("{number}!");
     }
     println!("LIFTOFF!!!");
+
+    convert_temperature(50);
+
+}
+
+fn convert_temperature(f_grad: i32) {
+    let mut c_grad = (f_grad - 32) * 5/9;
+    println!("{} grad F = {} grad C", f_grad, c_grad)
 }
